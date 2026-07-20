@@ -14,6 +14,8 @@
     <script src="script.js"></script>
   
 
+<script type="text/javascript"> window.addEventListener('load', () => { document.querySelector('[gps-entity-place]').addEventListener('gps-entity-place-update-position', (payload) => { let v = parseInt(payload.detail.distance); alert(${v} meter); 
+// you may show the distance in the value of <a-text> // document.getElementById("id-of-a-text").setAttribute('value', ${v} meter); }); }) </script>
 
 <!-- CSS -->
 <style>
