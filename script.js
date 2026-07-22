@@ -1,4 +1,8 @@
 
+import * as LocAR from 'locar';
+import * as THREE from 'three';
+
+
 AFRAME.registerComponent('rotation-reader', {
 
     tick: (function () {
@@ -13,6 +17,18 @@ AFRAME.registerComponent('rotation-reader', {
     })
   });
 
+//   AFRAME.registerComponent('query-selector-example', {
+//   init: function () {
+//     this.entities = document.querySelectorAll('.a-entity');
+//   },
+  
+//   tick: function () {
+//     // Don't call query selector in here, query beforehand.
+//     for (let i = 0; i < this.entities.length; i++) {
+//       // Do something with entities.
+//     }
+//   }
+// });
 
  AFRAME.registerComponent("healthandwellness", {
       init: function() {
@@ -25,18 +41,18 @@ function removeHwPopup(){
 
 };
 
-             AFRAME.registerComponent('vanish', {
-    // ...
-    pause: function () {
+  //            AFRAME.registerComponent('vanish', {
+  //   // ...
+  //   pause: function () {
       
-      this.removeEventListener();
-    }
-    // ...
-  });
+  //     this.removeEventListener();
+  //   }
+  //   // ...
+  // });
    
 
      
         window.onload = () => {navigator.geolocation.getCurrentPosition((position) => {
-          document.querySelector('a-shere').setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`)
+          document.querySelector('a-asset-item').setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`)
         });
        }
